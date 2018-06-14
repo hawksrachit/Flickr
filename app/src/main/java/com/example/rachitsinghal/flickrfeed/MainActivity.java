@@ -11,8 +11,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        RecyclerView recyclerView= (RecyclerView)findViewById(R.id.recyclerView);
+        RecyclerView recyclerView= findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(new Adapter());
+        String[] lang={"abc"};
+        recyclerView.setAdapter(new FlickrAdapter(lang));
     }
 }
